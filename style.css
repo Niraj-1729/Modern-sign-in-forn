@@ -1,0 +1,64 @@
+*,
+*::before,
+* ::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+main {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #ff8c6b;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box {
+    position: relative;
+    width: 100%;
+    max-width: 1020px;
+    height: 640px;
+    background-color: #fff;
+    border-radius: 3rem;
+    box-shadow: 0 60px 40px -30px rgba(0, 0, 0, 0.27);
+}
+
+.inner-box {
+    position: absolute;
+    width: calc(100% - 4.1rem);
+    height: calc(100% - 4.1rem);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* background-color: antiquewhite; */
+}
+
+.forms-wrap {
+    position: absolute;
+    height: 100%;
+    width: 45%;
+    top: 0;
+    left: 0;
+}
+
+.carousel {
+    position: absolute;
+    height: 100%;
+    width: 55%;
+    left: 45%;
+    top: 0;
+    background-color: #ffe0d2;
+    border-radius: 2rem;
+}
+
+form {
+    max-width: 260px;
+    width: 100%;
+    background-color: red;
+    margin: 0 auto;
+    height: 100%;
+    
+}
