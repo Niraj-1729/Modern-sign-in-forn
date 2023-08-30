@@ -49,17 +49,13 @@ main {
     width: 45%;
     top: 0;
     left: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    transition: .8s ease-in-out;
 }
 
-.carousel {
-    position: absolute;
-    height: 100%;
-    width: 55%;
-    left: 45%;
-    top: 0;
-    background-color: #ffe0d2;
-    border-radius: 2rem;
-}
+
 
 form {
     max-width: 260px;
@@ -70,8 +66,17 @@ form {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    transition: opacity 0.02s 0.4s;
 
 }
+
+form.sign-up-form {
+    opacity: 0;
+    pointer-events: none;
+}
+
 
 .logo {
     display: flex;
@@ -80,7 +85,8 @@ form {
 
 .logo img {
     width: 27px;
-    margin: 0.3rem;
+    margin-right: 0.3rem;
+
 }
 
 .logo h4 {
@@ -185,4 +191,49 @@ label {
 
 .text a:hover {
     color: #8371fd;
+}
+
+main.sign-up-mode form.sign-in-form {
+    opacity: 0;
+    pointer-events: none;
+}
+
+main.sign-up-mode form.sign-up-form {
+    opacity: 1;
+    pointer-events: all;
+}
+
+main.sign-up-mode .forms-wrap {
+    left: 55%;
+}
+
+main.sign-up-mode .carousel {
+    left: 0%;
+}
+
+.carousel {
+    position: absolute;
+    height: 100%;
+    width: 55%;
+    left: 45%;
+    top: 0;
+    background-color: #ffe0d2;
+    border-radius: 2rem;
+    transition: .8s ease-in-out;
+}
+
+.images-wrapper{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+}
+
+.image{
+    width: 100%;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    opacity: 0;
+}
+.image.show{
+    opacity: 1;
 }
